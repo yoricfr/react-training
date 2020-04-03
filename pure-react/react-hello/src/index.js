@@ -11,9 +11,10 @@ function World() {
 
 function HelloWorld() {
   return (
-    <div>
-      <Hello/> <World/>!!! 
-    </div> 
+    <React.Fragment>
+      <Hello/>
+      <World/>
+    </React.Fragment>
     ); 
 } 
 
