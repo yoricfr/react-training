@@ -89,7 +89,21 @@ function MyThing3() {
   );
 }
 
+function Greeting() {
+
+  let username = 'root';
+  //let username = undefined;
+  //let username = null;
+  //let username = false;
+
+  return(
+    <div>
+    { username == null || typeof(username) == 'undefined' ? 'Not logged in' : 'Hello '+username }
+    </div>
+  );
+}
+
 ReactDOM.render(
-  <MyThing3/>,
+  <Greeting/>,
   document.querySelector('#root')
 );
