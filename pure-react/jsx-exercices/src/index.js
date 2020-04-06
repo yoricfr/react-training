@@ -55,7 +55,41 @@ function MyThing2() {
   );
 }
 
+function MyThing3() {
+  const e = React.createElement;
+  return (
+    e(
+      'div',
+      { className: 'book' },
+      e(
+        'div',
+        { className: 'title' },
+          'The Title 3'
+      ),
+      e(
+        'div',
+        { className: 'author' },
+        'The Author'
+      ),
+      e(
+        'ul',
+        { className: 'stats' },
+        e(
+          'li',
+          { className: 'rating' },
+          '5 stars'
+        ),
+        e(
+          'li',
+          { className: 'isbn' },
+          '12-345678-910'
+        )
+      )
+    )
+  );
+}
+
 ReactDOM.render(
-  <MyThing2/>,
+  <MyThing3/>,
   document.querySelector('#root')
 );
