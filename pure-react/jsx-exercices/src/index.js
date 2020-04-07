@@ -90,7 +90,6 @@ function MyThing3() {
 }
 
 function Greeting() {
-
   let username = 'root';
   //let username = undefined;
   //let username = null;
@@ -103,7 +102,42 @@ function Greeting() {
   );
 }
 
+function Table() {
+  return(
+    <table>
+      <tbody>
+        <tr>
+          <td>One</td>
+          <td>Two</td>
+          <td>Three</td>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
+
+function Data() {
+  return (
+    <>
+    <td>One</td>
+    <td>Two</td>
+    <td>Three</td>
+    </>
+  );
+}
+
+function Table2() {
+  return(
+    <table>
+      <tbody>
+        <tr>
+         <Data/>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
 ReactDOM.render(
-  <Greeting/>,
+  <Table2/>,
   document.querySelector('#root')
 );
